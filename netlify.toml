@@ -11,7 +11,7 @@
   #  keyFile = "key.pem" # path to the private key file
 
 [build]
-  command = "npm run build"
+  command = "npm run netlify-build"
   publish = "/dist"
   base ="/"
 

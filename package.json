@@ -8,6 +8,7 @@
     "dev": "set NODE_ENV=development&& webpack serve --config webpack.dev.js",
     "build-local": "set NODE_ENV=production&& webpack --config webpack.prod.js --env ANALYZE=true",
     "build": "set NODE_ENV=production&& webpack --config webpack.prod.js --env ANALYZE=false",
+    "netlify-build": "set NODE_ENV=production&& webpack --config webpack.prod.js --env ANALYZE=false --only=dev",
     "test": "set NODE_ENV=test&& jest --watchAll"
   },
   "author": "AlstonChan",
