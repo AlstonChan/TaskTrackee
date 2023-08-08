@@ -51,3 +51,11 @@ supabase
 **Fix :** change to `output.publicPath = "/"` in `webpack.prod.js`
 
 **Netlify support :** <https://answers.netlify.com/t/invalid-mime-type-for-js-file/75809>
+
+## 5. Typescript path resolution failure
+
+**Behavior :** When running the dev server or compiling the application, it outputs `Module not found: Error: Can't resolve '$Styles/global.scss' in 'D:\TaskTrackee\src\routes'@ ./src/index.tsx`.
+
+**Fix :** Have `webpack.config.js` resolve and `tsconfig.json` path have the same path alias. Then, install `tsconfig-paths-webpack-plugin` to resolve the path for typescript.
+
+**Blog source :** <https://medium.com/@danil_chepelev/how-to-setup-path-aliases-with-react-typescript-and-webpack-54e579c189e1>

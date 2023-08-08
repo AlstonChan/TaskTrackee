@@ -4,10 +4,10 @@ import logo from "$Public/logo/logo.png";
 import { lazy, Suspense, useState } from "react";
 import Image from "@chan_alston/image";
 
-const SignUpPage = lazy(() => import("$Components/homepage/SignUp"));
-const LoginPage = lazy(() => import("$Components/homepage/Login"));
+const SignUpPage = lazy(() => import("$Components/homepage/SignUp.js"));
+const LoginPage = lazy(() => import("$Components/homepage/Login.js"));
 
-import Spinner from "$Components/PageLoader";
+import Spinner from "$Components/PageLoader.js";
 
 export default function Homepage() {
   // Switch between SignUpPage and LoginPage depending

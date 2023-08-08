@@ -1,4 +1,5 @@
 import "core-js/stable";
+import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
@@ -11,13 +12,13 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
-  // <React.StrictMode>
-  <BrowserRouter>
-    <Provider store={store}>
-      <HelmetProvider>
-        <AppRoutes />
-      </HelmetProvider>
-    </Provider>
-  </BrowserRouter>
-  // </React.StrictMode>
+  <React.StrictMode>
+    <BrowserRouter>
+      <Provider store={store}>
+        <HelmetProvider>
+          <AppRoutes />
+        </HelmetProvider>
+      </Provider>
+    </BrowserRouter>
+  </React.StrictMode>
 );

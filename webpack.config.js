@@ -1,10 +1,11 @@
 const webpack = require("webpack");
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 module.exports = {
   entry: {
-    index: "./src/index.js",
+    index: "./src/index.tsx",
   },
   // Rules of how webpack will take our files, compile & bundle them for the browser
   module: {
@@ -18,6 +19,11 @@ module.exports = {
             presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp|avif|heic|heif|ico)$/i,
@@ -50,6 +56,12 @@ module.exports = {
       $Styles: path.resolve(__dirname, "src/styles/"),
       $Components: path.resolve(__dirname, "src/components/"),
     },
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".scss"],
+    plugins: [
+      new TsconfigPathsPlugin({
+        /* options: see below */
+      }),
+    ],
   },
   target: "web",
 };

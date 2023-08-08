@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "$Public/*": ["public/*"],
+      "$Icon/*": ["public/icon/*"],
+      "$Lib/*": ["src/lib/*"],
+      "$Routes/*": ["src/routes/*"],
+      "$Styles/*": ["src/styles/*"],
+      "$Components/*": ["src/components/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
