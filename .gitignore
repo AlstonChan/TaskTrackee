@@ -7,3 +7,5 @@ dist
 !.env.vault
 # Local Netlify folder
 .netlify
+
+.flaskenv*

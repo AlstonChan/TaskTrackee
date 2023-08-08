@@ -9,11 +9,11 @@
 
 # Task Tracker Application [![Netlify Status](https://api.netlify.com/api/v1/badges/e8c2b072-4c30-4226-8bbf-9206b3b837b6/deploy-status)](https://app.netlify.com/sites/tasktrackee/deploys)
 
-A task managment application built with **REACT. JS**
+A task management application built with **REACT. JS**
 
 ## Getting Started
 
-1. Clone this respository into your local machine with the following command:
+1. Clone this repository into your local machine with the following command:
 
    ```bash
    git clone https://github.com/AlstonChan/TaskTrackee.git
@@ -70,15 +70,21 @@ A task managment application built with **REACT. JS**
 
 6. Do `npm run dev` and open ***[localhost:3000](http://localhost:3000)*** in your browser to view the application.
 
+7. If you have setup your `.env` file to be saved to **dotenv-vault**, run the following command to pull your file to the project.
+
+    ```bash
+    npx dotenv-vault pull
+    ```
+
 ## Package. json script option
 
 ### 1. `npm run dev`
 
-Set the `NODE_ENV` environment variable to *development* and start a webpack dev server at ***[localhost:3000](http://localhost:3000)*** using the `webpack.dev.js` configuration file. You may open ***[localhost:8888](http://localhost:8888)*** and visualized the bundle size of the application.
+Set the `NODE_ENV` environment variable to *development* and start a webpack dev server at ***[localhost:3000](http://localhost:3000)*** using the `webpack.dev.js` configuration file.
 
-### 2. `npm run build-local`
+### 2. `npm run build:local`
 
-Set the `NODE_ENV` environment variable to *production* and output the bundled application to `/dist` directory using the `webpack.prod.js` configuration file. The `--env ANALYZE=true` will enable **BundleAnalyzerPlugin** and open ***[localhost:8888](http://localhost:8888)*** automatically upon bundled file is outputed to the `dist` directory. Optimal for local development.
+Set the `NODE_ENV` environment variable to *production* and output the bundled application to `/dist` directory using the `webpack.prod.js` configuration file. The `--env ANALYZE=true` will enable **BundleAnalyzerPlugin** and open ***[localhost:8888](http://localhost:8888)*** automatically upon bundled file is outputted to the `dist` directory. Optimal for local development.
 
 ### 3. `npm run build`
 
@@ -98,9 +104,9 @@ Lint all the code in the `src` directory (except .test) file and fix all the aut
 
 ## Additional Configuration File
 
-### .env.vault
+### .env.me
 
-I have use a [Dotenv Vault](https://www.dotenv.org/) services to store the my `.env` file as `.env` file ***SHOULD NOT*** be commit and push to a respository, I figured that the dotenv vault is a great place to store such file. You could and should delete this file if you plan on using your own vault to store the `.env` file or you simply wanted a remove a needless file.
+This file is use by a service called [Dotenv Vault](https://www.dotenv.org/) to store the credentials to authenticate user to pull the `.env` file. this file must not be committed to the git.
 
 ### netlify.toml
 
